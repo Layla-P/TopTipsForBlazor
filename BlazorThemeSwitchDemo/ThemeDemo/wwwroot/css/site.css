@@ -1,0 +1,16 @@
+﻿nav {
+  background-color: forestgreen;
+  padding: 1em;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+}
+
+.sidebar {
+  background-color: purple;
+}
