@@ -1,6 +1,7 @@
-﻿using BlazorHybridMaui.Data;
+﻿using Maui.Data;
+using Microsoft.AspNetCore.Components.WebView.Maui;
 
-namespace BlazorHybridMaui
+namespace Maui
 {
     public static class MauiProgram
     {
@@ -14,7 +15,11 @@ namespace BlazorHybridMaui
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
 
-            builder.Services.AddBlazorWebView();
+            builder.Services.AddMauiBlazorWebView();
+#if DEBUG
+		builder.Services.AddBlazorWebViewDeveloperTools();
+#endif
+
             builder.Services.AddSingleton<WeatherForecastService>();
 
             return builder.Build();
